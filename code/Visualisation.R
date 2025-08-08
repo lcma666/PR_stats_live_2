@@ -6,4 +6,10 @@ library (devtools)
 devtools::install_github ("ducchiorocchin/imageRy")
 
 #improting data
-im.lis()
+im.list()
+
+# sentinel bands
+#https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/bands/
+
+# importing the data
+b2 <- im.import("sentinel.dolomites.b2.tif")
