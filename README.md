@@ -10,4 +10,19 @@ dev.off()
 ```
 
 <img src="Pics/mygraph.png" width="100%" />
+``` r
+png("mygraph2.png")
+par(mfrow=c(2,2))
+cl <- colorRampPalette(c("cyan","chocolate","chartreuse","hotpink","maroon4","slategray4"))(100)
+plot(b2, col=cl)
+cl <- colorRampPalette(c("chartreuse","firebrick","cyan"))(100)
+plot(b2, col=cl)
+cl <- colorRampPalette(c("black","grey","light grey"))(100)
+plot(b2, col=cl)
+cl <- colorRampPalette(c("seagreen","seagreen1","seagreen2","seagreen3","seagreen4"))(100)
+plot(b2, col=cl)
+dev.off()
+```
+
+
 <img src="Pics/mygraph.png" width="100%" />
