@@ -10,3 +10,4 @@ dev.off()
 ```
 
 <img src="Pics/mygraph.png" width="100%" />
+<img src="Pics/mygraph.png" width="100%" />
