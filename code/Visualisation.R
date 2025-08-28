@@ -66,3 +66,38 @@ cl <- colorRampPalette(c("seagreen","seagreen1","seagreen2","seagreen3","seagree
 plot(b2, col=cl)
 dev.off()
 
+# Exercise: put all the images in the same column
+png("mygraph3.png")
+par(mfrow=c(4,1))
+cl <- colorRampPalette(c("cyan","chocolate","chartreuse","hotpink","maroon4","slategray4"))(100)
+plot(b2, col=cl)
+cl <- colorRampPalette(c("chartreuse","firebrick","cyan"))(100)
+plot(b2, col=cl)
+cl <- colorRampPalette(c("black","grey","light grey"))(100)
+plot(b2, col=cl)
+cl <- colorRampPalette(c("seagreen","seagreen1","seagreen2","seagreen3","seagreen4"))(100)
+plot(b2, col=cl)
+dev.off()
+
+# Importing the other Sentinel-2 bands
+im.list()
+
+# green band - 550nm
+dev.off()
+b3 <- im.import("sentinel.dolomites.b3.tif")
+
+# red band - 665nm
+b4 <- im.import("sentinel.dolomites.b4.tif")
+
+# NIR band - 842nm
+b8 <- im.import("sentinel.dolomites.b8.tif")
+
+
+# stack
+sent <- c(b2, b3, b4, b8)
+plot(sent)
+
+pairs(sent)
+
+cl <- colorRampPalette(c("black","grey","light grey"))(100)
+plot(sent, col=cl)
